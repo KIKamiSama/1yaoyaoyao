@@ -1,6 +1,90 @@
-* {
+@charset "UTF-8";
+html,
+body,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: '微软雅黑';
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+b,
+strong {
+  font-weight: normal;
+}
+
+i,
+em,
+b,
+strong {
+  font-style: normal;
+}
+
+a,
+u {
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  display: block;
+}
+
+input,
+fieldset {
+  outline: none;
+  border: 0;
+}
+
+.clear_fix:after {
+  content: '.';
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  display: block;
+  visibility: hidden;
+}
+
+.clear_fix {
+  zoom: 1;
 }
 
 .top {
@@ -15,7 +99,6 @@
 .top .wrapper {
   width: 1190px;
   margin: 0 auto;
-  background: green;
 }
 .top .wrapper .top-left {
   float: left;
@@ -32,7 +115,11 @@
   background: url(https://s.maiyaole.com/images/201306/images/common_sprite.png?t==20141218d) no-repeat right 0;
   background-position: right -178px;
 }
+.top .wrapper .top-left ul li em {
+  color: red;
+}
 .top .wrapper .top-left ul li .city {
+  display: none;
   position: absolute;
   top: 36px;
   left: -1px;
@@ -45,7 +132,18 @@
   padding: 5px 0;
   border-top: none;
 }
-.top .wrapper .top-left ul li .city:hover {
+.top .wrapper .top-left ul li .city li {
+  padding-left: 10px;
+  line-height: 22px;
+  color: #a5a5a5;
+  font-weight: 700;
+  float: none;
+}
+.top .wrapper .top-left ul li .city li a {
+  text-decoration: none;
+  color: #333;
+}
+.top .wrapper .top-left ul li:hover .city {
   display: block;
   z-index: 9999;
 }
@@ -67,6 +165,37 @@
   padding: 0;
   line-height: 36px;
 }
+.top .wrapper .top-right ul em {
+  color: red;
+}
+.top .wrapper .top-right ul .menu {
+  position: relative;
+}
+.top .wrapper .top-right ul .menu ul {
+  position: absolute;
+  margin: 0 0 0 10px;
+  left: -11px;
+  top: -27px;
+  background: #fff;
+  z-index: 10001;
+  display: none;
+  width: 85px;
+  padding: 32px 0 0;
+  border: #ddd 1px solid;
+}
+.top .wrapper .top-right ul .menu ul li a {
+  color: #5e5e5e;
+  line-height: 24px;
+  height: 24px;
+  float: left;
+  width: 82px;
+}
+.top .wrapper .top-right ul .menu ul li:hover a {
+  color: blue;
+}
+.top .wrapper .top-right ul .menu:hover ul {
+  display: block;
+}
 .top .wrapper .top-right ul li {
   float: left;
   line-height: 36px;
@@ -86,6 +215,142 @@
 }
 .top .wrapper .top-right ul .login a {
   color: red;
+}
+
+.logo-main .wrapper {
+  width: 1190px;
+  margin: 0 auto;
+}
+.logo-main .wrapper .logo {
+  width: 180px;
+  float: left;
+  height: 113px;
+  overflow: hidden;
+  zoom: 1;
+  position: relative;
+  padding-top: 26px;
+  margin-right: 105px;
+}
+.logo-main .wrapper .logo a {
+  text-decoration: none;
+  display: block;
+  text-indent: -9999px;
+  width: 180px;
+  height: 61px;
+  background: url(https://s.maiyaole.com/images/common/logo_01.png) no-repeat;
+}
+.logo-main .wrapper .search {
+  float: left;
+  margin: 34px 0 0 0;
+  background-color: #fff;
+  position: relative;
+  z-index: 9999;
+}
+.logo-main .wrapper .search .place {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  line-height: 40px;
+  padding-left: 12px;
+  color: #5e5e5e;
+  width: 393px;
+  height: 30px;
+  overflow: hidden;
+  zoom: 1;
+}
+.logo-main .wrapper .search input {
+  width: 435px;
+  outline: 0;
+  float: left;
+  height: 44px;
+  line-height: 44px;
+  padding: 0 5px 0 9px;
+  border: 1px solid #c7a774;
+  color: #666;
+  font-size: 15px;
+  background-color: #fff;
+}
+.logo-main .wrapper .search #btn {
+  float: left;
+  width: 82px;
+  height: 46px;
+  line-height: 55px;
+  border: 1px solid #c7a774;
+  cursor: pointer;
+  background-color: #fff;
+  margin-left: -1px;
+  color: #c7a774;
+  font-size: 21px;
+  line-height: 46px;
+  cursor: pointer;
+}
+.logo-main .wrapper .search .list {
+  margin-top: 10px;
+}
+.logo-main .wrapper .search .list a {
+  text-decoration: none;
+  color: #5e5e5e;
+  padding: 0 6px 0 0;
+  margin-right: 6px;
+  height: 16px;
+  line-height: 16px;
+  font-family: Arial;
+  font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+}
+.logo-main .wrapper .search .list a:hover {
+  color: red;
+}
+.logo-main .wrapper .search .APP img {
+  position: absolute;
+  right: -210px;
+  top: -7px;
+  width: 100px;
+  height: 93px;
+}
+
+.nav {
+  margin: 0 auto;
+  border-bottom: 2px solid #d2b994;
+}
+.nav .wrapper {
+  width: 1190px;
+  margin: 0 auto;
+  height: 46px;
+}
+.nav .wrapper .nav-first {
+  display: block;
+  float: left;
+  z-index: 100;
+  display: block;
+  font: 400 15px/48px tahoma, arial, Microsoft YaHei;
+  color: #fff;
+  width: 166px;
+  padding: 0 0 0 14px;
+  height: 48px;
+  background-color: #19323a;
+  font-weight: 700;
+}
+.nav .wrapper ul {
+  float: left;
+}
+.nav .wrapper ul li {
+  float: left;
+}
+.nav .wrapper ul li a {
+  font-weight: 400;
+  font-family: "Microsoft YaHei";
+  color: #505050;
+  padding: 0 16px;
+  font-size: 16px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: 46px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.nav .wrapper ul li:hover a {
+  color: blue;
 }
 
 /*# sourceMappingURL=index1.css.map */

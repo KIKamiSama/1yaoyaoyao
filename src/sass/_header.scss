@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .top {
     height: 36px;
     z-index: 10000;
@@ -14,7 +9,6 @@
     .wrapper {
         width: 1190px;
         margin: 0 auto;
-        background: green;
         .top-left {
             float: left;
             width: 189px;
@@ -27,8 +21,11 @@
                     padding: 0 10px;
                     background: url(https://s.maiyaole.com/images/201306/images/common_sprite.png?t==20141218d) no-repeat right 0;
                     background-position: right -178px;
+                    em {
+                        color: red;
+                    }
                     .city {
-                        // display: none;
+                        display: none;
                         position: absolute;
                         top: 36px;
                         left: -1px;
@@ -38,13 +35,23 @@
                         color: #333;
                         font-weight: 400;
                         cursor: default;
-                        // z-index: -1;
                         padding: 5px 0;
                         border-top: none;
-                        &:hover {
-                            display: block;
-                            z-index: 9999;
+                        li {
+                            padding-left: 10px;
+                            line-height: 22px;
+                            color: #a5a5a5;
+                            font-weight: 700;
+                            float: none;
+                            a {
+                                text-decoration: none;
+                                color: #333;
+                            }
                         }
+                    }
+                    &:hover .city {
+                        display: block;
+                        z-index: 9999;
                     }
                 }
             }
@@ -64,6 +71,39 @@
                     font-family: Tahoma;
                     padding: 0;
                     line-height: 36px;
+                }
+                em {
+                    color: red;
+                }
+                .menu {
+                    position: relative;
+                    ul {
+                        position: absolute;
+                        margin: 0 0 0 10px;
+                        left: -11px;
+                        top: -27px;
+                        background: #fff;
+                        z-index: 10001;
+                        display: none;
+                        width: 85px;
+                        padding: 32px 0 0;
+                        border: #ddd 1px solid;
+                        li {
+                            a {
+                                color: #5e5e5e;
+                                line-height: 24px;
+                                height: 24px;
+                                float: left;
+                                width: 82px;
+                            }
+                        }
+                        li:hover a {
+                            color: blue;
+                        }
+                    }
+                }
+                .menu:hover ul {
+                    display: block;
                 }
                 li {
                     float: left;
@@ -87,6 +127,146 @@
                         color: red;
                     }
                 }
+            }
+        }
+    }
+}
+
+.logo-main {
+    .wrapper {
+        width: 1190px;
+        margin: 0 auto;
+        .logo {
+            width: 180px;
+            float: left;
+            height: 113px;
+            overflow: hidden;
+            zoom: 1;
+            position: relative;
+            padding-top: 26px;
+            margin-right: 105px;
+            a {
+                text-decoration: none;
+                display: block;
+                text-indent: -9999px;
+                width: 180px;
+                height: 61px;
+                background: url(https://s.maiyaole.com/images/common/logo_01.png) no-repeat;
+            }
+        }
+        .search {
+            float: left;
+            margin: 34px 0 0 0;
+            background-color: #fff;
+            position: relative;
+            z-index: 9999;
+            .place {
+                position: absolute;
+                left: 0;
+                top: 3px;
+                line-height: 40px;
+                padding-left: 12px;
+                color: #5e5e5e;
+                width: 393px;
+                height: 30px;
+                overflow: hidden;
+                zoom: 1;
+            }
+            input {
+                width: 435px;
+                outline: 0;
+                float: left;
+                height: 44px;
+                line-height: 44px;
+                padding: 0 5px 0 9px;
+                border: 1px solid #c7a774;
+                color: #666;
+                font-size: 15px;
+                background-color: #fff;
+            }
+            #btn {
+                float: left;
+                width: 82px;
+                height: 46px;
+                line-height: 55px;
+                border: 1px solid #c7a774;
+                cursor: pointer;
+                background-color: #fff;
+                margin-left: -1px;
+                color: #c7a774;
+                font-size: 21px;
+                line-height: 46px;
+                cursor: pointer;
+            }
+            .list {
+                margin-top: 10px;
+                a {
+                    text-decoration: none;
+                    color: #5e5e5e;
+                    padding: 0 6px 0 0;
+                    margin-right: 6px;
+                    height: 16px;
+                    line-height: 16px;
+                    font-family: Arial;
+                    font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+                }
+                a:hover {
+                    color: red;
+                }
+            }
+            .APP {
+                img {
+                    position: absolute;
+                    right: -210px;
+                    top: -7px;
+                    width: 100px;
+                    height: 93px;
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    margin: 0 auto;
+    border-bottom: 2px solid #d2b994;
+    .wrapper {
+        width: 1190px;
+        margin: 0 auto;
+        height: 46px;
+        .nav-first {
+            display: block;
+            float: left;
+            z-index: 100;
+            display: block;
+            font: 400 15px/48px tahoma, arial, Microsoft YaHei;
+            color: #fff;
+            width: 166px;
+            padding: 0 0 0 14px;
+            height: 48px;
+            background-color: #19323a;
+            font-weight: 700;
+        }
+        ul {
+            float: left;
+            li {
+                float: left;
+                a {
+                    font-weight: 400;
+                    font-family: "Microsoft YaHei";
+                    color: #505050;
+                    padding: 0 16px;
+                    font-size: 16px;
+                    letter-spacing: normal;
+                    word-spacing: normal;
+                    line-height: 46px;
+                    position: relative;
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+            li:hover a {
+                color: blue;
             }
         }
     }
