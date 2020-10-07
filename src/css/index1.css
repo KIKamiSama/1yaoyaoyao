@@ -353,4 +353,63 @@ fieldset {
   color: blue;
 }
 
+.banner .wrapper {
+  width: 1190px;
+  margin: 0 auto;
+}
+.banner .wrapper .ban-l {
+  width: 180px;
+  float: left;
+}
+.banner .wrapper .ban-l ul {
+  height: 400px;
+  background-color: #314349;
+}
+.banner .wrapper .ban-l ul li a {
+  display: block;
+  width: 180px;
+  height: 40px;
+  color: #fff;
+  background-color: #314349;
+  text-decoration: none;
+}
+.banner .wrapper .ban-l ul li a i {
+  float: left;
+  font-size: 24px;
+  line-height: 24px;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: 15px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  z-index: 103;
+}
+.banner .wrapper .ban-l ul li a h4 {
+  margin-left: 47px;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  font-family: "Microsoft YaHei", tahoma, arial, \5b8b\4f53;
+}
+.banner .wrapper .ban-m {
+  width: 750px;
+  height: 400px;
+  float: left;
+}
+.banner .wrapper .ban-m a img {
+  width: 750px;
+  height: 400px;
+}
+.banner .wrapper .ban-r {
+  width: 259px;
+  height: 398px;
+  height: 399px;
+  border-right: 1px solid #d2b994;
+  overflow: hidden;
+  border-bottom: 1px solid #d2b994;
+}
+
 /*# sourceMappingURL=index1.css.map */

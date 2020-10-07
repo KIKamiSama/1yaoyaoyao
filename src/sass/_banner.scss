@@ -1,0 +1,68 @@
+.banner {
+    .wrapper {
+        width: 1190px;
+        margin: 0 auto;
+        .ban-l {
+            width: 180px;
+            float: left;
+            ul {
+                height: 400px;
+                background-color: #314349;
+                li {
+                    a {
+                        display: block;
+                        width: 180px;
+                        height: 40px;
+                        color: #fff;
+                        background-color: #314349;
+                        text-decoration: none;
+                        i {
+                            float: left;
+                            font-size: 24px;
+                            line-height: 24px;
+                            color: #fff;
+                            margin-top: 10px;
+                            margin-left: 15px;
+                            display: block;
+                            width: 24px;
+                            height: 24px;
+                            overflow: hidden;
+                            z-index: 103;
+                        }
+                        h4 {
+                            margin-left: 47px;
+                            font-size: 14px;
+                            height: 40px;
+                            line-height: 40px;
+                            font-weight: 400;
+                            font-family: "Microsoft YaHei", tahoma, arial, \5b8b\4f53;
+                        }
+                    }
+                }
+            }
+        }
+        .ban-m {
+            // position: relative;
+            // overflow: hidden;
+            width: 750px;
+            height: 400px;
+            float: left;
+            a {
+                img {
+                    width: 750px;
+                    height: 400px;
+                    // position: absolute;
+                    // left: 0;
+                }
+            }
+        }
+        .ban-r {
+            width: 259px;
+            height: 398px;
+            height: 399px;
+            border-right: 1px solid #d2b994;
+            overflow: hidden;
+            border-bottom: 1px solid #d2b994;
+        }
+    }
+}
