@@ -69,6 +69,13 @@
       "unicode_decimal": 58904
     },
     {
+      "icon_id": "6234680",
+      "name": "正品保证",
+      "font_class": "zhengpinbaozheng",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
       "icon_id": "8767303",
       "name": "手机",
       "font_class": "shouji",

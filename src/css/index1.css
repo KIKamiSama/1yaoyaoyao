@@ -356,6 +356,7 @@ fieldset {
 .banner .wrapper {
   width: 1190px;
   margin: 0 auto;
+  position: relative;
 }
 .banner .wrapper .ban-l {
   width: 180px;
@@ -364,6 +365,65 @@ fieldset {
 .banner .wrapper .ban-l ul {
   height: 400px;
   background-color: #314349;
+}
+.banner .wrapper .ban-l ul li:hover {
+  padding-left: 5px;
+  transition: all .2s linear;
+}
+.banner .wrapper .ban-l ul li:hover a {
+  background-color: white;
+  color: #314349;
+}
+.banner .wrapper .ban-l ul li:hover i {
+  color: #314349;
+}
+.banner .wrapper .ban-l ul li:hover .cartlist {
+  display: block;
+}
+.banner .wrapper .ban-l ul li:hover .cartlist .item {
+  display: block;
+}
+.banner .wrapper .ban-l ul li:hover .cartlist .item dl {
+  display: block;
+  font: 12px/18px Arial, tahoma, \5b8b\4f53;
+  background: #fff;
+  margin-bottom: 13px;
+}
+.banner .wrapper .ban-l ul li:hover .cartlist .item dl dt {
+  margin: 6px 0 0 23px;
+  padding: 0;
+  line-height: 20px;
+  height: 20px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.banner .wrapper .ban-l ul li:hover .cartlist .item dl dd {
+  color: #999;
+  line-height: 1.6;
+  width: 220x;
+  margin: 0 0 0 23px;
+  padding: 0 0 6px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.banner .wrapper .ban-l ul li:hover .cartlist .item dl dd em {
+  margin: 8px 6px 0 -8px;
+  padding: 1px 6px 0 7px;
+  display: inline-block;
+  font-style: normal;
+  border-left: #ddd 1px solid;
+  font-weight: 400;
+  line-height: 1;
+}
+.banner .wrapper .ban-l ul li:hover .cartlist .item dl dd em a {
+  color: #424242;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 60px;
+  height: 21px;
 }
 .banner .wrapper .ban-l ul li a {
   display: block;
@@ -394,6 +454,24 @@ fieldset {
   font-weight: 400;
   font-family: "Microsoft YaHei", tahoma, arial, \5b8b\4f53;
 }
+.banner .wrapper .cartlist {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  height: 400px;
+  width: 750px;
+  z-index: 101;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e7;
+  border-right: 1px solid #e8e8e7;
+  clear: both;
+  display: none;
+}
+.banner .wrapper .cartlist .item {
+  position: absolute;
+  padding: 20px;
+  display: none;
+}
 .banner .wrapper .ban-m {
   width: 750px;
   height: 400px;
@@ -410,6 +488,245 @@ fieldset {
   border-right: 1px solid #d2b994;
   overflow: hidden;
   border-bottom: 1px solid #d2b994;
+}
+.banner .wrapper .ban-r .title-1 {
+  line-height: 32px;
+  padding-left: 13px;
+}
+.banner .wrapper .ban-r .title-1 a {
+  text-align: center;
+  padding-top: 5px;
+  font-size: 12px;
+  color: #707070;
+  margin-left: 10px;
+}
+.banner .wrapper .ban-r .content {
+  padding-left: 23px;
+  padding-bottom: 8px;
+  overflow: hidden;
+  font-size: 13px;
+}
+.banner .wrapper .ban-r .content a {
+  width: 72px;
+  float: left;
+  height: 25px;
+  line-height: 25px;
+  color: #707070;
+}
+.banner .wrapper .ban-r .content a i {
+  background: url(https://s.maiyaole.com/images/201306/images/just_index.png) no-repeat;
+  display: inline-block;
+  background-position: -15px -452px;
+  width: 6px;
+  height: 10px;
+  margin-left: 5px;
+  position: relative;
+  top: 1px;
+}
+.banner .wrapper .ban-r .content a:hover {
+  text-decoration: underline;
+}
+.banner .wrapper .ban-r .img-1 {
+  text-align: center;
+  overflow: hidden;
+  margin: 0 13px;
+}
+.banner .wrapper .ban-r .img-1 a img {
+  width: 100%;
+}
+.banner .wrapper .ban-r .title-2 {
+  margin-left: 20px;
+  padding-top: 10px;
+  clear: both;
+  font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+}
+.banner .wrapper .ban-r .title-2 a {
+  font-weight: bold;
+  color: #000;
+  padding-bottom: 5px;
+}
+.banner .wrapper .ban-r .img-2 ul {
+  margin-left: 20px;
+  padding-top: 5px;
+  height: 44px;
+}
+.banner .wrapper .ban-r .img-2 ul li {
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+  border: 1px solid #d0d0d0;
+  float: left;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.banner .wrapper .ban-r .img-2 ul li img {
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+}
+.banner .wrapper .ban-r .title-3 {
+  display: inline-block;
+  font-size: 12px;
+  padding-left: 10px;
+}
+.banner .wrapper .ban-r .title-3 a {
+  font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+  color: #707070;
+}
+.banner .wrapper .ban-r .img-3 {
+  padding: 0 0 0 10px;
+  height: 71px;
+  padding-top: 8px;
+}
+.banner .wrapper .ban-r .img-3 a {
+  width: 60px;
+  float: left;
+  display: block;
+  text-align: center;
+}
+.banner .wrapper .ban-r .img-3 a i {
+  background: url(https://s.maiyaole.com/images/201306/images/icon_gonggao.png) no-repeat;
+  background-position: -42px -44px;
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+}
+.banner .wrapper .ban-r .img-3 a span {
+  display: block;
+  color: #333;
+  font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+}
+
+.banner2 .wrapper {
+  width: 1190px;
+  margin: 0 auto;
+}
+.banner2 .wrapper .oclock {
+  width: 180px;
+  height: 150px;
+  background: pink;
+  display: block;
+  float: left;
+}
+.banner2 .wrapper a {
+  float: left;
+  display: block;
+}
+.banner2 .wrapper a img {
+  display: inline-block;
+}
+
+.main-1 .wrapper {
+  width: 1190px;
+  margin: 0 auto;
+}
+.main-1 .wrapper .floor1, .main-1 .wrapper .floor2 {
+  margin-top: 30px;
+  border: 1px solid #F3F3F3;
+  font-family: "Microsoft Yahei";
+  color: #5e5e5e;
+  width: 1189px;
+  height: 485px;
+  border-top: none;
+  border-bottom: none;
+}
+.main-1 .wrapper .floor1 .floor-l, .main-1 .wrapper .floor2 .floor-l {
+  float: left;
+  width: 180px;
+}
+.main-1 .wrapper .floor1 .floor-l .title, .main-1 .wrapper .floor2 .floor-l .title {
+  padding-left: 20px;
+  height: 85px;
+  background: #92c4ff;
+  color: #F8F8F8;
+  line-height: 85px;
+  font-size: 20px;
+}
+.main-1 .wrapper .floor1 .floor-l ul li, .main-1 .wrapper .floor2 .floor-l ul li {
+  float: left;
+  width: 89px;
+  height: 49px;
+  border: 1px solid #F3F3F3;
+  border-left: none;
+  border-top: none;
+  text-align: center;
+  line-height: 49px;
+  font-size: 14px;
+}
+.main-1 .wrapper .floor1 .floor-l ul li a, .main-1 .wrapper .floor2 .floor-l ul li a {
+  font-family: "Microsoft Yahei";
+  color: #5e5e5e;
+}
+.main-1 .wrapper .floor1 .floor-l ul li a:hover, .main-1 .wrapper .floor2 .floor-l ul li a:hover {
+  text-decoration: underline;
+  color: red;
+}
+.main-1 .wrapper .floor1 .floor-r, .main-1 .wrapper .floor2 .floor-r {
+  height: 284px;
+}
+.main-1 .wrapper .floor1 .floor-r .img-1, .main-1 .wrapper .floor2 .floor-r .img-1 {
+  width: 605px;
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid #f3f3f3;
+}
+.main-1 .wrapper .floor1 .floor-r .img-1 img, .main-1 .wrapper .floor2 .floor-r .img-1 img {
+  width: 605px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+.main-1 .wrapper .floor1 .floor-r .img-2, .main-1 .wrapper .floor2 .floor-r .img-2 {
+  height: 100%;
+  float: left;
+}
+.main-1 .wrapper .floor1 .floor-r .img-2 img, .main-1 .wrapper .floor2 .floor-r .img-2 img {
+  width: 200px;
+  height: 100%;
+  float: left;
+  border-right: 1px solid #F3F3F3;
+}
+.main-1 .wrapper .floor1 .floor-list, .main-1 .wrapper .floor2 .floor-list, .main-1 .wrapper .floor2 .floor2-list {
+  height: 201px;
+}
+.main-1 .wrapper .floor1 .floor-list li, .main-1 .wrapper .floor2 .floor-list li, .main-1 .wrapper .floor2 .floor2-list li {
+  float: left;
+  width: 160px;
+  padding: 20px 20px 10px 20px;
+  border-right: 1px solid #F3F3F3;
+  border-bottom: 1px solid #F3F3F3;
+  height: 170px;
+}
+.main-1 .wrapper .floor1 .floor-list li img, .main-1 .wrapper .floor2 .floor-list li img, .main-1 .wrapper .floor2 .floor2-list li img {
+  width: 100px;
+  height: 100px;
+  margin-left: 30px;
+  display: block;
+}
+.main-1 .wrapper .floor1 .floor-list li a, .main-1 .wrapper .floor2 .floor-list li a, .main-1 .wrapper .floor2 .floor2-list li a {
+  font-size: 14px;
+  height: 20px;
+  overflow: hidden;
+  text-align: center;
+  margin: 15px 0 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+}
+.main-1 .wrapper .floor1 .floor-list li p, .main-1 .wrapper .floor2 .floor-list li p, .main-1 .wrapper .floor2 .floor2-list li p {
+  color: #E72418;
+  font-size: 16px;
+  text-align: center;
+}
+.main-1 .wrapper .floor1 .floor-list li p i, .main-1 .wrapper .floor2 .floor-list li p i, .main-1 .wrapper .floor2 .floor2-list li p i {
+  font-size: 12px;
+  padding-right: 5px;
+}
+.main-1 .wrapper .floor2 .floor-l .title {
+  background-color: #ffa27a;
 }
 
 /*# sourceMappingURL=index1.css.map */

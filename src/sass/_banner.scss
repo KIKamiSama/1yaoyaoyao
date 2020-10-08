@@ -2,12 +2,72 @@
     .wrapper {
         width: 1190px;
         margin: 0 auto;
+        position: relative;
         .ban-l {
             width: 180px;
             float: left;
             ul {
                 height: 400px;
                 background-color: #314349;
+                li:hover {
+                    padding-left: 5px;
+                    transition: all .2s linear;
+                    a {
+                        background-color: white;
+                        color: #314349;
+                    }
+                    i {
+                        color: #314349;
+                    }
+                    .cartlist {
+                        display: block;
+                        .item {
+                            display: block;
+                            dl {
+                                display: block;
+                                font: 12px/18px Arial, tahoma, \5b8b\4f53;
+                                background: #fff;
+                                margin-bottom: 13px;
+                                dt {
+                                    margin: 6px 0 0 23px;
+                                    padding: 0;
+                                    line-height: 20px;
+                                    height: 20px;
+                                    font-weight: 700;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                }
+                                dd {
+                                    color: #999;
+                                    line-height: 1.6;
+                                    width: 220x;
+                                    margin: 0 0 0 23px;
+                                    padding: 0 0 6px 0;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                    em {
+                                        margin: 8px 6px 0 -8px;
+                                        padding: 1px 6px 0 7px;
+                                        display: inline-block;
+                                        font-style: normal;
+                                        border-left: #ddd 1px solid;
+                                        font-weight: 400;
+                                        line-height: 1;
+                                        a {
+                                            color: #424242;
+                                            text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            width: 60px;
+                                            height: 21px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
                 li {
                     a {
                         display: block;
@@ -41,6 +101,24 @@
                 }
             }
         }
+        .cartlist {
+            position: absolute;
+            top: 0;
+            left: 180px;
+            height: 400px;
+            width: 750px;
+            z-index: 101;
+            background: #fff;
+            border-bottom: 1px solid #e8e8e7;
+            border-right: 1px solid #e8e8e7;
+            clear: both;
+            display: none;
+            .item {
+                position: absolute;
+                padding: 20px;
+                display: none;
+            }
+        }
         .ban-m {
             // position: relative;
             // overflow: hidden;
@@ -63,6 +141,139 @@
             border-right: 1px solid #d2b994;
             overflow: hidden;
             border-bottom: 1px solid #d2b994;
+            .title-1 {
+                line-height: 32px;
+                padding-left: 13px;
+                a {
+                    text-align: center;
+                    padding-top: 5px;
+                    font-size: 12px;
+                    color: #707070;
+                    margin-left: 10px;
+                }
+            }
+            .content {
+                padding-left: 23px;
+                padding-bottom: 8px;
+                overflow: hidden;
+                font-size: 13px;
+                a {
+                    width: 72px;
+                    float: left;
+                    height: 25px;
+                    line-height: 25px;
+                    color: #707070;
+                    i {
+                        background: url(https://s.maiyaole.com/images/201306/images/just_index.png) no-repeat;
+                        display: inline-block;
+                        background-position: -15px -452px;
+                        width: 6px;
+                        height: 10px;
+                        margin-left: 5px;
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+            .img-1 {
+                text-align: center;
+                overflow: hidden;
+                margin: 0 13px;
+                a {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .title-2 {
+                margin-left: 20px;
+                padding-top: 10px;
+                clear: both;
+                font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+                a {
+                    font-weight: bold;
+                    color: #000;
+                    padding-bottom: 5px;
+                }
+            }
+            .img-2 {
+                ul {
+                    margin-left: 20px;
+                    padding-top: 5px;
+                    height: 44px;
+                    li {
+                        width: 44px;
+                        height: 44px;
+                        border-radius: 5px;
+                        border: 1px solid #d0d0d0;
+                        float: left;
+                        margin-right: 10px;
+                        cursor: pointer;
+                        position: relative;
+                        img {
+                            width: 44px;
+                            height: 44px;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+            .title-3 {
+                display: inline-block;
+                font-size: 12px;
+                padding-left: 10px;
+                a {
+                    font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+                    color: #707070;
+                }
+            }
+            .img-3 {
+                padding: 0 0 0 10px;
+                height: 71px;
+                padding-top: 8px;
+                a {
+                    width: 60px;
+                    float: left;
+                    display: block;
+                    text-align: center;
+                    i {
+                        background: url(https://s.maiyaole.com/images/201306/images/icon_gonggao.png) no-repeat;
+                        background-position: -42px -44px;
+                        display: inline-block;
+                        width: 37px;
+                        height: 37px;
+                    }
+                    span {
+                        display: block;
+                        color: #333;
+                        font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner2 {
+    .wrapper {
+        width: 1190px;
+        margin: 0 auto;
+        .oclock {
+            width: 180px;
+            height: 150px;
+            background: pink;
+            display: block;
+            float: left;
+        }
+        a {
+            float: left;
+            display: block;
+            img {
+                display: inline-block;
+            }
         }
     }
 }
