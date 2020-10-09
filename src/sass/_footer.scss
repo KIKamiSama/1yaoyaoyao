@@ -1,0 +1,177 @@
+.wrapper {
+    width: 1190px;
+    margin: 0 auto;
+    .ico-part {
+        padding-top: 62px;
+        clear: both;
+        .ico {
+            width: 1190px;
+            height: 100px;
+            margin: 0 auto;
+            background: url(https://s.maiyaole.com/images/201306/images/jsyhm.png) no-repeat 0 0;
+        }
+    }
+    .app-part {
+        margin-top: 60px;
+        .app {
+            float: left;
+            padding-left: 110px;
+            li {
+                width: 255px;
+                float: left;
+                img {
+                    width: 94px;
+                    height: 94px;
+                    float: left;
+                    margin-right: 12px;
+                }
+                .app-content {
+                    padding-top: 27px;
+                    h2 {
+                        font-size: 15px;
+                        color: #1c1c1c;
+                        font-weight: bold;
+                        margin-bottom: 3px;
+                    }
+                    p {
+                        font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+                        color: #5E5E5E;
+                    }
+                }
+            }
+        }
+        .sever-number {
+            width: 250px;
+            float: right;
+            border-left: 1px solid #eee;
+            text-align: center;
+            padding: 15px 0;
+            margin-right: 50px;
+            .number {
+                font-size: 20px;
+                color: #c7a774;
+                font-weight: 700;
+            }
+            .num-content {
+                color: #999;
+                line-height: 18px;
+                padding-top: 8px;
+                font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+            }
+        }
+    }
+}
+
+.footer {
+    background: #f0f0f0;
+    margin-top: 65px;
+    padding-top: 45px;
+    .inner {
+        width: 1190px;
+        margin: 0 auto;
+        .footer-top {
+            position: relative;
+            padding-left: 215px;
+            padding-top: 15px;
+            img {
+                position: absolute;
+                left: 0;
+                top: 30px;
+            }
+            .top-content {
+                border-bottom: 1px solid #e5e5e5;
+                padding-bottom: 25px;
+                overflow: hidden;
+                dl {
+                    width: 155px;
+                    float: left;
+                    dt {
+                        font-weight: bold;
+                        color: #1c1c1c;
+                        font-size: 15px;
+                        padding-bottom: 10px;
+                    }
+                    dd {
+                        line-height: 26px;
+                        a {
+                            color: #666;
+                            font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-bottom {
+            position: relative;
+            padding-left: 215px;
+            padding-top: 15px;
+            .logo {
+                position: absolute;
+                left: 0;
+                top: 30px;
+            }
+            .bot-content {
+                color: #5e5e5e;
+                text-align: center;
+                padding: 5px 0 30px;
+                .member {
+                    overflow: hidden;
+                    padding-top: 25px;
+                    span {
+                        color: #666;
+                        float: left;
+                        line-height: 56px;
+                        font-size: 12px;
+                    }
+                    ul {
+                        float: left;
+                        font-weight: bold;
+                        font-size: 14px;
+                        color: #333;
+                        text-align: left;
+                        margin-left: 15px;
+                        li {
+                            width: 270px;
+                            float: left;
+                            line-height: 56px;
+                            img {
+                                width: 56px;
+                                height: 56px;
+                                margin-right: 10px;
+                                float: left;
+                            }
+                            span {
+                                font-weight: bold;
+                                font-size: 14px;
+                                color: #333;
+                                float: left;
+                                line-height: 56px;
+                            }
+                        }
+                    }
+                }
+                .link {
+                    text-align: left;
+                    line-height: 30px;
+                    padding-top: 30px;
+                    margin-left: -20px;
+                    a {
+                        margin: 0 20px;
+                        color: #666;
+                        font-size: 12px;
+                    }
+                }
+                .copy {
+                    text-align: left;
+                    color: #999;
+                    line-height: 20px;
+                    padding-top: 15px;
+                    font: 12px tahoma, arial, "Microsoft Yahei", \5b8b\4f53;
+                    a {
+                        color: #999;
+                    }
+                }
+            }
+        }
+    }
+}

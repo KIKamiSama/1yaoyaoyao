@@ -1,0 +1,83 @@
+.wrapper {
+    margin: 0 auto;
+    width: 990px;
+    .wrap-head {
+        height: 98px;
+        overflow: hidden;
+    }
+    .reg {
+        position: relative;
+        background: #fff url(https://s.maiyaole.com/images/passport/r_bg_02.png) no-repeat right bottom;
+        width: 988px;
+        min-height: 352px;
+        color: #5e5e5e;
+        border: #e6e6e6 1px solid;
+        border-top: #0083ce 2px solid;
+        box-shadow: -1px 1px 10px #EFEFEF, -1px 10px 10px #EFEFEF;
+        padding-bottom: 20px;
+        .bg {
+            position: absolute;
+            right: 0;
+            bottom: 0px;
+            text-indent: -9999px;
+            display: block;
+            width: 500px;
+            height: 372px;
+        }
+        h2 {
+            font: 20px "microsoft yahei";
+            margin: 13px 0;
+            padding-left: 50px;
+            padding-right: 18px;
+            span {
+                float: right;
+                font-size: 12px;
+                margin-top: 7px;
+                font-family: \5b8b\4f53;
+                a {
+                    color: #0083ce;
+                }
+            }
+        }
+    }
+    .reg-bot {
+        padding-left: 100px;
+        padding-top: 5px;
+        color: #5e5e5e;
+        .number {
+            height: 70px;
+            width: 342px;
+            position: relative;
+            z-index: 99;
+            .p-number {
+                display: block;
+                width: 286px;
+                height: 26px;
+                padding: 6px 12px 6px 40px;
+                font-size: 14px;
+                line-height: 1.428571429;
+                background-color: transparent;
+                border: 1px solid #e6e6e6;
+                background: url(https://s.maiyaole.com/images/passport/regest.png) no-repeat 0 0;
+                background-position: 8px -114px;
+            }
+            i {
+                height: 16px;
+                width: auto;
+                float: right;
+                padding-right: 25px;
+                margin-top: -28px;
+                background: url(https://s.maiyaole.com/images/passport/regest.png) no-repeat 0 0;
+                background-position: right -57px;
+                color: #5e5e5e;
+                font: 12px "Lucida Grande", tahoma, arial, \5b8b\4f53;
+            }
+            span {
+                color: #e72418;
+                padding-top: 5px;
+                line-height: 24px;
+                font: 12px "Lucida Grande", tahoma, arial, \5b8b\4f53;
+            }
+        }
+    }
+}

@@ -119,5 +119,16 @@
                 @extend .floor-list;
             }
         }
+        .floor3 {
+            @extend .floor1;
+            .floor-l {
+                .title {
+                    background-color: #ff6b6b;
+                }
+            }
+            .floor3-list {
+                @extend .floor-list;
+            }
+        }
     }
 }
