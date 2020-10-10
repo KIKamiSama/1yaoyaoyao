@@ -3,7 +3,7 @@ require(['config'], function() {
         ! function($) {
             const list = $('.floor3-list');
             $.ajax({ //获取远程接口的值
-                url: 'http://localhost/JS2008/yaoyaoyao/php/piclist3.php',
+                url: 'http://192.168.11.3/JS2008/yaoyaoyao/php/piclist3.php',
                 dataType: 'json'
             }).done(function(data) {
                 // console.log(data);

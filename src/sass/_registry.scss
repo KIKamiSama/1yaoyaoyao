@@ -8,6 +8,8 @@
     .reg {
         position: relative;
         background: #fff url(https://s.maiyaole.com/images/passport/r_bg_02.png) no-repeat right bottom;
+        background-position-y: 70px;
+        padding-bottom: 70px!important;
         width: 988px;
         min-height: 352px;
         color: #5e5e5e;
@@ -18,7 +20,8 @@
         .bg {
             position: absolute;
             right: 0;
-            bottom: 0px;
+            // bottom: 0px;
+            top: 60px;
             text-indent: -9999px;
             display: block;
             width: 500px;
