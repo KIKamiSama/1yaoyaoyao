@@ -5,3 +5,4 @@ require(['index-tab']);
 require(['elevator']);
 require(['canvas']);
 require(['shoufengqin']);
+require(['mainlist']);
