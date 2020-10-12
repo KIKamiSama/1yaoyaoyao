@@ -6,3 +6,4 @@ require(['elevator']);
 require(['canvas']);
 require(['shoufengqin']);
 require(['mainlist']);
+require(['detail']);
