@@ -4,8 +4,8 @@ require(['config'], function() {
             //1.获取列表页传来的sid
             let $sid = location.search.substring(1).split('=')[1];
 
-            const $smallpic = $('.smallpic');
-            const $bpic = $('.bpic');
+            const $smallpic = $('.imgkk img');
+            const $bpic = $('.bf img');
             const $title = $('.propoty h1');
             const $price = $('.d-price');
 
@@ -18,11 +18,11 @@ require(['config'], function() {
             $.ajax({
                 url: 'http://192.168.11.3/JS2008/yaoyaoyao/php/getsiddetail.php',
                 data: {
-                    sid: $sid
+                    datasid: $sid
                 },
                 dataType: 'json'
             }).done(function(d) {
-                console.log(d);
+                // console.log(d);
                 $smallpic.attr('src', d.url);
                 $smallpic.attr('sid', d.sid); //给图片添加唯一的sid
                 $bpic.attr('src', d.url);
@@ -138,11 +138,11 @@ require(['config'], function() {
             //多次点击：之前创建过商品列表，只需要数量增加。
 
             //取出cookie,才能判断是第一次还是多次点击
-            function cookietoarray() {
-                if (jscookie.get('cookiesid') && jscookie.get('cookienum')) {
-                    arrsid = jscookie.get('cookiesid').split(','); //获取cookie 同时转换成数组。[1,2,3,4]
-                    arrnum = jscookie.get('cookienum').split(','); //获取cookie 同时转换成数组。[12,13,14,15]
-                } else {
+            function getcookie() {
+                if ($.cookie('cookiesid') && $.cookie('cookienum')) { //cookie存在
+                    arrsid = $.cookie('cookiesid').split(','); //获取cookie的sid，存放到数组中。
+                    arrnum = $.cookie('cookienum').split(','); //获取cookie的数量，存放到数组中。
+                } else { //cookie不存在
                     arrsid = [];
                     arrnum = [];
                 }
@@ -150,31 +150,58 @@ require(['config'], function() {
 
 
 
-            $('.cart-btn a').on('click', function() {
-                //获取当前商品对应的sid
-                let $sid = $(this).parents('.box').find('.smallpic').attr('sid');
-                //判断是第一次点击还是多次点击
-                //多次点击
-                //$.inArray(value,array,[fromIndex])
-                //确定第一个参数在数组中的位置，从0开始计数(如果没有找到则返回 -1 )。
-                cookietoarray();
-                if ($.inArray($sid, arrsid) != -1) { //$sid存在，商品列表存在，数量累加
-                    //先取出cookie中存在的数量+当前添加的数量，一起添加到cookie中。
-                    let $num = parseInt(arrnum[$.inArray($sid, arrsid)]) + parseInt($('#count').val()); //取值
-                    arrnum[$.inArray($sid, arrsid)] = $num; //赋值
-                    jscookie.add('cookienum', arrnum, 10);
-                } else {
-                    //第一次点击加入购物车按钮,将商品的sid和商品的数量放到提前准备的数组里面，然后将数组传入cookie.
-                    arrsid.push($sid); //将编号$sid push到arrsid数组中
-                    jscookie.add('cookiesid', arrsid, 10);
-                    arrnum.push($('#count').val()); //将数量push到arrnum数组中
-                    jscookie.add('cookienum', arrnum, 10);
+            // $('.cart-btn').on('click', function() {
+            //     //获取当前商品对应的sid
+            //     let $sid = $(this).parents('.box').find('.imgkk img').attr('sid');
+            //     //判断是第一次点击还是多次点击
+            //     //多次点击
+            //     //$.inArray(value,array,[fromIndex])
+            //     //确定第一个参数在数组中的位置，从0开始计数(如果没有找到则返回 -1 )。
+            //     getcookie();
+            //     if ($.inArray($sid, arrsid) != -1) { //$sid存在，商品列表存在，数量累加
+            //         //先取出cookie中存在的数量+当前添加的数量，一起添加到cookie中。
+            //         let $num = parseInt(arrnum[$.inArray($sid, arrsid)]) + parseInt($('.num-con').val()); //取值
+            //         arrnum[$.inArray($sid, arrsid)] = $num; //赋值
+            //         jscookie.add('cookienum', arrnum, 10);
+            //     } else {
+            //         //第一次点击加入购物车按钮,将商品的sid和商品的数量放到提前准备的数组里面，然后将数组传入cookie.
+            //         arrsid.push($sid); //将编号$sid push到arrsid数组中
+            //         jscookie.add('cookiesid', arrsid, 10);
+            //         arrnum.push($('.num-con').val()); //将数量push到arrnum数组中
+            //         jscookie.add('cookienum', arrnum, 10);
+            //     }
+            //     alert('按钮触发了');
+            // });
+
+
+
+            $('.cart-btn').on('click', function() {
+                getcookie(); //如果cookie存在，取到cookie的值，并且变成了数组。
+                // let $sid = $(this).parents('.box').find('.imgkk img').attr('sid');
+                let $sid = $('.imgkk img').attr('sid');
+                console.log($sid);
+                //如果arrsid里面存在当前商品的sid，说明商品已经存在，否则商品是第一次购买。
+                //$.inArray(value,array)确定第一个参数在数组中的位置，从0开始计数(如果没有找到则返回 -1 )。
+                //alue:查找的值
+                //array:数组
+                if ($.inArray($sid, arrsid) === -1) { //不存在，将商品的sid和数量存入cookie
+                    arrsid.push($sid); //添加当前商品的sid
+                    $.cookie('cookiesid', arrsid, { expires: 10, path: '/' }); //插件完成的cookie的添加。
+                    arrnum.push($('.num-con').val()); //添加商品的数量
+                    $.cookie('cookienum', arrnum, { expires: 10, path: '/' }); //插件完成的cookie的添加。
+                } else { //存在,商品的数量累加
+                    //获取原来的sid对应的数量(sid和数量是对应的 ，sid的在数组的位置就是数量在数组的位置)
+                    let index = $.inArray($sid, arrsid); //sid在数组中的位置
+                    let num = parseInt(arrnum[index]); //sid对应的数量
+                    //原来的数量+新添加数量，一起存入cookie
+                    arrnum[index] = num + parseInt($('.num-con').val()); //原来的数量+新添加数量进行赋值
+                    $.cookie('cookienum', arrnum, { expires: 10, path: '/' }); //一起存入cookie
                 }
-                alert('按钮触发了');
+
+                alert('按钮被点击了');
+
+
             });
-
-
-
 
         }(jQuery);
     })

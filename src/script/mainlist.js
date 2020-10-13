@@ -19,7 +19,7 @@ require(['config'], function() {
                         strhtml += `
                     <li>
                     <div class="yagao">
-                    <a href="javascript:;"><img class="lazy" data-original="${value.url}" alt=""></a>
+                    <a href="detail.html?sid=${value.sid}"><img class="lazy" data-original="${value.url}" alt=""></a>
                     <p class="y-price"><span id="pp">￥${value.price}</span></p>
                     <p class="title-box">
                         <a href="">
@@ -80,7 +80,7 @@ require(['config'], function() {
                             $strhtml += `
                     <li>
                     <div class="yagao">
-                    <a href="javascript:;"><img class="lazy" data-original="${value.url}" alt=""></a>
+                    <a href="detail.html?sid=${value.sid}"><img class="lazy" data-original="${value.url}" alt=""></a>
                     <p class="y-price"><span id="pp">￥${value.price}</span></p>
                     <p class="title-box">
                         <a href="">
